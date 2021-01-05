@@ -10,7 +10,8 @@ body{
   margin: 0;
   padding: 0;
   text-align: center;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 2px;
 }
 
 h1{
@@ -32,28 +33,32 @@ hr {
   width: 10%;
   border: 0;
   border-top: 1px solid rgba(0,0,0,.1);
+  margin-bottom: 40px;
 }
 
 .container {
-  padding: 5% 15%;
+  padding: 5% 15% 7%;
   line-height: 1.6;
   width: 100%;
 }
 
 .navbar{
-  padding: 1rem 15%;
+  padding: 3rem 15%;
   position: fixed;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #343a40;
   z-index: 10;
+  transition: padding 1s, background-color .5s;
+  background-color: transparent;
 }
 
 .nav-link {
+  font-size: 35px;
   text-decoration: none;
-  color: white;
   padding-right: 10px;
+  transition: font-size 1s;
+  color: black;
 }
 
 .nav-link:hover {
@@ -62,13 +67,14 @@ hr {
 
 .burger {
   display: none;
-  color: white;
+  color: black;
   text-decoration: none;
+  font-size: 1.5rem;
 }
 
 .color-background{
-  background-color: #4FD3A1;
-  color: white;
+  background-color: #f6f6f6;
+  color: black;
 }
 
 .logo{
@@ -79,7 +85,7 @@ hr {
 .grid-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 20px;
+  grid-gap: 20px;
   align-items: center;
 }
 
@@ -98,8 +104,11 @@ hr {
   transition: .5s ease;
 }
 
-.project-links {
+.project-description {
+  width: 80%;
   display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   position: absolute;
   gap: 20px;
   top: 40%;
@@ -109,16 +118,28 @@ hr {
   transition: .5s ease;
 }
 
+.project-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
 .project-links .fab, .project-links .fas {
   color: black;
 }
 
 .grid-item:hover .project-img{
-  opacity: .2;
+  opacity: .1;
 }
 
-.grid-item:hover .project-links{
+.grid-item:hover .project-description{
   opacity: 1;
+}
+
+.description-box {
+  background: white;
+  margin-top: 0;
+  padding: 5%;
 }
 
 footer {
@@ -136,17 +157,98 @@ footer {
   opacity: .8;
 }
 
-#home {
-  padding: 200px 10% 150px;
+.fa-chevron-down {
+  color: black;
 }
 
-@media (max-width: 1024px) {
-  .grid-container {
-    grid-template-columns: 1fr 1fr;
+.home-button {
+  padding: 15px;
+  cursor: pointer;
+}
+
+.down-arrow {
+  position: absolute;
+  left: 49%;
+  bottom: 30px;
+  animation: bounce 1s infinite;
+  animation-direction: alternate;
+}
+
+#home {
+  height: 100vh;
+  text-align: left;
+  padding: 20vh 25%;
+}
+
+#home h1 {
+  font-size: 65px;
+  overflow: hidden; 
+  border-right: .15rem solid black;
+  white-space: nowrap;
+}
+
+#home h1:nth-child(1) {
+  width: 2.85em;
+  opacity: 0;
+  animation: typing 1.5s steps(20, end);
+  animation-fill-mode: forwards;
+}
+
+#home h1:nth-child(2) {
+  width: 7.5em;
+  opacity: 0;
+  animation: typing 2s steps(30, end);
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+}
+
+#home h1:nth-child(3) {
+  width: 8.75em;
+  opacity: 0;
+  animation: 
+    typing 2s steps(40, end),
+    blink-caret 1.2s step-end infinite;
+  animation-delay: 4.5s;
+  animation-fill-mode: forwards;
+}
+
+.about-me {
+  margin: 0 25% ;
+  text-align: left;
+}
+
+@keyframes bounce {
+  0% { bottom: 15px }
+  100% { bottom: 30px }
+}
+
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  99.9% {
+    border-right: .15rem solid black;
+  }
+  100% {
+    opacity: 1;
+    border-color: transparent;
   }
 }
 
-@media (max-width: 768px) {
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: black; }
+}
+
+
+@media (max-width: 1024px) {
+  #home {
+    padding: 20vh 18%;
+  }
+
   .navbar {
     flex-wrap: wrap;
   }
@@ -166,6 +268,41 @@ footer {
   }
 
   .grid-container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .project-description {
+    width: 90%;
+    font-size: .8rem;
+  }
+
+  .about-me {
+    margin: 0 15%;
+  }
+}
+
+@media (max-width: 768px) {
+  #home h1 {
+    font-size: 50px;
+  }
+
+  .grid-container {
     grid-template-columns: 1fr;
+  }
+
+  .project-description {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  #home h1 {
+    font-size: 45px;
+  }
+}
+
+@media (max-width: 480px) {
+  #home h1 {
+    white-space: normal;
   }
 }

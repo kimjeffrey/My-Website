@@ -4,28 +4,97 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <title>Jeffrey Kim Website</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/fbd28ca34c.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/styles.css">
     <script src="index.js" charset="utf-8" defer></script>
   </head>
   <body>
     <nav class="navbar container">
-      <a class="nav-link" href="#">Jeffrey Kim</a>
+      <a class="site-logo nav-link" href="#">Jeffrey Kim</a>
 
       <a class="burger" href="javascript:void(0);" onClick="expandNav()">&#9776;</a>
 
       <div class="nav-expanded">
-        <a class="nav-link" href="#skills">Skills</a>
         <a class="nav-link" href="#projects">Projects</a>
+        <a class="nav-link" href="#skills">Skills</a>
         <a class="nav-link" href="#about">About Me</a>
       </div>
     </nav>
 
-    <section id="home" class="color-background container">
-      <h1>Hi, I'm Jeffrey Kim</h1>
+    <section id="home" class="no-background">
+      <h1>Hello! </h1>
+      <h1>I'm Jeffrey Kim</h1>
+      <h1>A Web Developer</h1>
+      <!-- <button class="home-button" type="button" onclick="location.href='#projects'">Check out my projects</button>
+      <button class="home-button" type="button" onclick="location.href='#about'">Learn more about me</button> -->
+      <a class="down-arrow" href="#projects"><i class="fas fa-chevron-down"></i></a>
+    </section>
+
+    <section id="projects" class="color-background container">
+      <h2>Projects</h2>
       <hr>
-      <p>A web developer</p>
+      <div class="grid-container">
+        <div class="grid-item">
+          <img class="project-img" src="images/Fruit-Site.png" alt="fruit-shop-img">
+          <div class="project-description">
+            <p>A practice Ecommerce site selling fruits, made using React, Redux, MongoDB. </p>
+            <div class="project-links">
+              <a href="https://github.com/kimjeffrey/Ecommerce-Practice-Fruit-Shop"><i class="fab fa-github"></i></a>
+              <a href="https://fruit-selling-site.herokuapp.com/"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          
+        </div>
+        <div class="grid-item">
+          <img class="project-img" src="images/Green-light-game.png" alt="green-light-game-img">
+          <div class="project-description">
+            <p>A grid-based game made using Javascript.</p>
+            <div class="project-links">
+              <a href="https://github.com/kimjeffrey/Green-Light-Game"><i class="fab fa-github"></i></a>
+              <a href="https://green-light-game.herokuapp.com/"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="grid-item">
+          <img class="project-img" src="images/Javascript-Calculator.png" alt="js-calculator-img">
+          <div class="project-description">
+            <p>A calculator app made using Javascript.</p>
+            <div class="project-links">
+              <a href="https://github.com/kimjeffrey/Javascript-Calculator-App"><i class="fab fa-github"></i></a>
+              <a href="https://js-calculator-app.herokuapp.com/"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="grid-item">
+          <img class="project-img" src="images/Note-taking-app.png" alt="note-app-img">
+          <div class="project-description">
+            <p>A note-taking app, made using React, inspired by Google's note-taking app Google Keep.</p>
+            <div class="project-links">
+              <a href="https://github.com/kimjeffrey/Note-taking-app"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="grid-item">
+          <img class="project-img" src="images/Blog-website.png" alt="blog-website-img">
+          <div class="project-description">
+            <p>A blog website made using Express/EJS and mongoDB.</p>
+            <div class="project-links">
+              <a href="https://github.com/kimjeffrey/Blog-website"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="grid-item">
+          <img class="project-img" src="images/Current-Forecast-app.png" alt="forecast-app-img">
+          <div class="project-description">
+            <p>A simple weather app, made using React, that gets weather information from an API by entering a location.</p>
+            <div class="project-links">
+              <a href="https://github.com/kimjeffrey/Current-Forecast-by-Location"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section id="skills" class="no-background container">
@@ -38,66 +107,18 @@
       <img class="logo" src="images/react.png" alt="react logo">
     </section>
 
-    <section id="projects" class="color-background container">
-      <h2>Projects</h2>
-      <hr>
-      <div class="grid-container">
-        <div class="grid-item">
-          <img class="project-img" src="images/Fruit-Site.png" alt="fruit-shop-img">
-          <div class="project-links">
-            <a href="https://github.com/kimjeffrey/Ecommerce-Practice-Fruit-Shop"><i class="fab fa-github"></i></a>
-            <a href="https://fruit-selling-site.herokuapp.com/"><i class="fas fa-external-link-alt"></i></a>
-          </div>
-          <p>A practice Ecommerce site, made using React. </p>
-        </div>
-        <div class="grid-item">
-          <img class="project-img" src="images/Green-light-game.png" alt="green-light-game-img">
-          <div class="project-links">
-            <a href="https://github.com/kimjeffrey/Green-Light-Game"><i class="fab fa-github"></i></a>
-            <a href="https://green-light-game.herokuapp.com/"><i class="fas fa-external-link-alt"></i></a>
-          </div>
-          <p>A grid-based game made using Javascript.</p>
-        </div>
-        <div class="grid-item">
-          <img class="project-img" src="images/Javascript-Calculator.png" alt="js-calculator-img">
-          <div class="project-links">
-            <a href="https://github.com/kimjeffrey/Javascript-Calculator-App"><i class="fab fa-github"></i></a>
-            <a href="https://js-calculator-app.herokuapp.com/"><i class="fas fa-external-link-alt"></i></a>
-          </div>
-          <p>A calculator app made using Javascript.</p>
-        </div>
-        <div class="grid-item">
-          <img class="project-img" src="images/Note-taking-app.png" alt="note-app-img">
-          <div class="project-links">
-            <a href="https://github.com/kimjeffrey/Note-taking-app"><i class="fab fa-github"></i></a>
-          </div>
-          <p>A note-taking app, made using React, inspired by Google's note-taking app Google Keep.</p>
-        </div>
-        <div class="grid-item">
-          <img class="project-img" src="images/Blog-website.png" alt="blog-website-img">
-          <div class="project-links">
-            <a href="https://github.com/kimjeffrey/Blog-website"><i class="fab fa-github"></i></a>
-          </div>
-          <p>A blog website made using Express/EJS and mongoDB to store blog posts in a local database.</p>
-        </div>
-        <div class="grid-item">
-          <img class="project-img" src="images/Current-Forecast-app.png" alt="forecast-app-img">
-          <div class="project-links">
-            <a href="https://github.com/kimjeffrey/Current-Forecast-by-Location"><i class="fab fa-github"></i></a>
-          </div>
-          <p>A simple weather app, made using React, that gets weather information from an API by entering a location.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="about" class="no-background container">
+    <section id="about" class="color-background container">
       <h2>About Me</h2>
       <hr>
       <p class="about-me">
-        I am a Queens College graduate with a degree of Bachelor of Science in Computer Science.
-        I am pursuing a career in web development.
+        My name's Jeffrey. 
+        I'm a Queens College graduate with a degree of Bachelor of Science in Computer Science.
+        As a web developer, I enjoy creating websites that are user-friendly while pleasing to look at. 
+        I am constantly learning new things every day and looking for opportunities to improve my skills.
       </p>
     </section>
+
+    
 
     <footer class="container">
       <h3>Find me on</h3>
