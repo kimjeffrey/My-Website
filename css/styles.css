@@ -39,7 +39,7 @@ hr {
 .container {
   padding: 5% 15% 7%;
   line-height: 1.6;
-  width: 100%;
+  width: 100vw;
 }
 
 .navbar{
@@ -304,5 +304,23 @@ footer {
 @media (max-width: 480px) {
   #home h1 {
     white-space: normal;
+  }
+
+  #home h1:nth-child(1) {
+    width: 2.85em;
+  }
+  
+  #home h1:nth-child(2) {
+    width: 5.3em;
+  }
+  
+  #home h1:nth-child(3) {
+    width: 5.3em;
+  }
+}
+
+@media (max-width: 375px) {
+  .site-logo {
+    font-size: 25px;
   }
 }
