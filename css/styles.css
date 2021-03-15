@@ -39,7 +39,7 @@ hr {
 .container {
   padding: 5% 15% 7%;
   line-height: 1.6;
-  width: 100vw;
+  width: 100%;
 }
 
 .navbar{
@@ -215,6 +215,17 @@ footer {
 .about-me {
   margin: 0 25% ;
   text-align: left;
+}
+
+footer {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.copyright {
+  margin-top: 30px;
+  font-size: .7em;
+  color: rgba(255, 255, 255, 0.671);
 }
 
 @keyframes bounce {
